@@ -1,0 +1,58 @@
+reduce
+filter
+find
+
+ReactiveX
+Baseia-se nas ideias:
+- Observer pattern
+- Iterator pattern
+- programação funcional
+
+RXJS - Implementação ReactiveX para JavaScript
+
+OBSERVABLE - encapsula dados
+
+PROMISE só emite um valor no caso quando resolvidas
+não emite mais
+
+PROMISE - eager
+OBSERVABLE - lazy
+
+.PIPE(
+***SHARE()) - compartilhar dados observable, evitando
+uma nova inscrição
+
+***valores emitidos emediatamente são sincronos
+***assincronos leva tempo
+
+***PROMISE não cancelavéis
+***SUBJECT	permite emit um valor para varias inscrições
+***BEHAVIORSUBJECT sempre inicia com um valor, e mantem
+o último valor para qualquer novo subscribe
+***REPLAYSUBJECT armazena uma quantidade especifica definida
+de valor já emitidos para devolver para novas inscrições
+pode receber um segundo parâmetro que indica o tempo
+em milesegundo o tempo que será armazenado as informações
+***ASYNCSUBJECT só recebe a última emissão do subject
+e somente quando o subject é completado, mantem esta
+emissaõ para novas in	scrições
+***OF emite valores recebidor of(1,2,3)
+***FROM recebe estrutura de dados e transforma e observables
+***INTERVAL emite valores por tempo
+***RANGE emitir valores numericos dentro de um range RANGE(1000, 10)
+	EMITE A PARTIR DE 1000 E 10 VALORES
+***GENERATE semelhante ao for
+***FROMEVENT transforma um evento JS em observable
+***SWITCHMAP mata a inscrição anterior caso tenha uma nova
+***TAKEUNTIL ate que algo sejá enviado
+***MAP recebe um valor e devolve outro
+***DELAY aguarda um tempo para executar
+***MERGE unir dois observable
+***FILTER filtrar valores em array e retorna boolean quando encontra
+***TAP captura o valor emitido, não afeta o fluxo
+***SKIP ignora emissões vindo de cima, skip(1) ignora apenas um
+***PLUCK pega um objeto e extrair uma propriedade pluck('res', 'json') neste caso foi
+extraído json de dentro de res
+***DEBOUNCETIME aguarda um certo tempo antes de fazer a requisição
+***CATCHERRO recebe dois parâmetros (erro, source(fonte/callback))
+video 8
